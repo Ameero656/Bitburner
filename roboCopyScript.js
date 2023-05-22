@@ -47,7 +47,7 @@ export async function main(ns) {
 			let selectedServer = getAvalibleServers(ns, script);
 			
 			plantVirus(ns, script, selectedServer);
-			executeVirus(ns, script, selectedServer, virusThreads[i], target, virusDelay, b);
+			executeVirus(ns, script, selectedServer, virusThreads, target, virusDelay, b);
 		}
 
 	}
