@@ -53,13 +53,11 @@ export async function main(ns) {
 		ns.tprint("Filename:", script, "| Threads:", threads)
 
 		let copied = ns.scp(script, host) //copy virus script to host
-		if (copied == true) copied = "sucessful!";
-		else copied = 'unsucessful.';
+		copied = copied == true ? 'sucessful!' : 'unsucessful.';
 		ns.tprint(`copying ${script}...${copied}`);
 
 		var executed = ns.exec(script, host, Math.floor(threads * universalRatio), target);
-		if (executed > 1) executed = "sucessful!";
-		else executed = 'unsucessful.';
+		executed = executed > 1 ? "sucessful!" : 'unsucessful.';
 		ns.tprint(`executing ${script}...${executed}`);
 	}
 }
